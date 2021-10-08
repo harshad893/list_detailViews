@@ -1,0 +1,36 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+    <title>Detail Page</title>
+{% endblock %}
+
+{% block body_block %}
+        <center>
+            <h1>Deatil Information of {{school.name}}</h1>
+
+            <table border=1px>
+                <tr><th>Name</th>
+                <th>Principal</th>
+            <th>Loacation</th></tr>
+            <tr>
+                <td>{{school.name}}</td>
+                <td>{{school.principal}}</td>
+                <td>{{school.location}}</td>
+            </tr>
+            </table>
+
+            <h1>Students Details of {{school.name}} is </h1>
+            <table border='2px'>
+                <tr><th>Nameof Student</th>
+                <th>Age of Student</th></tr>
+            
+                   {% for student in school.students.all %}
+                    <tr>
+                        <td>{{student.name}}</td>
+                        <td>{{student.age}}</td>
+                    </tr>
+                   {% endfor %}
+
+                </table>
+        </center>
+{% endblock %}
