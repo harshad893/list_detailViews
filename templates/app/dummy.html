@@ -12,7 +12,12 @@
 {% endblock %}
   </head>
   <body>
-    
+    <nav class="nav">
+        <a class='nav-link' href="{% url 'admin:index' %}">AdminPage</a>
+        <a class='nav-link' href="{% url 'home' %}">HomePage</a>
+        <a class='nav-link' href="{% url 'SchoolListView' %}">School List</a>
+        <a class='nav-link' href="{% url 'SchoolCreateView' %}">CreateSchool</a>
+    </nav>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
