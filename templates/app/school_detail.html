@@ -33,6 +33,7 @@
 
                 </table>
 
-                <a href="{% url 'update' pk=school.pk %}" class='btn btn-danger'>Update</a>
+    <a href="{% url 'update' pk=school.pk %}" class='btn btn-danger'>Update</a>
+    <a href="{% url 'delete' pk=school.pk %}" class='btn btn-danger'>Delete</a>
         </center>
 {% endblock %}
